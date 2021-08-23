@@ -10,12 +10,12 @@ window.onload = function() {
   console.log("Hello Rigo from the console!");
 };
 
-let pronoun = ["the", "our"];
-let adj = ["great", "big"];
-let noun = ["jogger", "racoon"];
-let extension = [".com", ".net", ".us", ".io", "etc"];
+let createDomain = () => {
+  let pronoun = ["the", "our"];
+  let adj = ["great", "big"];
+  let noun = ["jogger", "racoon"];
+  let extension = [".com", ".net", ".us", ".io", ".org"];
 
-let createDomain = (pronoun, adj, noun, extension) => {
   let randompronoun = Math.floor(Math.random() * pronoun.length);
   let randomadj = Math.floor(Math.random() * adj.length);
   let randomnoun = Math.floor(Math.random() * noun.length);
@@ -28,10 +28,5 @@ let createDomain = (pronoun, adj, noun, extension) => {
   );
 };
 
-document.getElementById("domain").innerHTML = createDomain(
-  pronoun,
-  adj,
-  noun,
-  extension
-);
-console.log(createDomain(pronoun, adj, noun, extension));
+document.getElementById("domain").innerHTML = createDomain();
+console.log(createDomain());
